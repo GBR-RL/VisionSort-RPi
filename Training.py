@@ -3,8 +3,8 @@ from ultralytics import YOLO
 
 
 # Paths
-DATA_YAML = "/rwthfs/rz/cluster/home/kt226005/jupyterlab/BOLTSNUTS/nuts-3/data.yaml"  # Path to your updated dataset.yaml file
-MODEL = "/rwthfs/rz/cluster/home/kt226005/jupyterlab/yolov8n.pt"  # Pretrained YOLOv8 model
+DATA_YAML = "/jupyterlab/BOLTSNUTS/nuts-3/data.yaml"  # Path to your updated dataset.yaml file
+MODEL = "/jupyterlab/yolov8n.pt"  # Pretrained YOLOv8 model
 EPOCHS = 100  # Number of epochs
 IMGSZ = 640  # Image size
 BATCH_SIZE = 32  # Batch size

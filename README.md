@@ -15,26 +15,33 @@ An intelligent conveyor belt sorting system powered by computer vision and Raspb
 
 ---
 
-## 🔍 Overview
-VisionSort-RPi is a DIY conveyor belt system designed to showcase real-world applications of embedded systems and AI. Built using a **Raspberry Pi 5**, **YOLOv8 object detection**, and custom hardware, the project automates sorting tasks like distinguishing between **Bolts and Nuts**.
+## 🔍 Overview  
+VisionSort-RPi is a DIY conveyor belt system designed to showcase real-world applications of embedded systems and AI. Built using a **Raspberry Pi 5**, **YOLOv8 object detection**, **Hailo AI acceleration**, and custom hardware, the project automates sorting tasks like distinguishing between **Bolts and Nuts** with enhanced inference performance.  
 
 ---
 
-## 🎯 Features
-- **Real-Time Object Detection**: Detects and classifies objects on the conveyor belt using YOLOv8.  
-- **Hardware Integration**: Includes NEMA 17 stepper motors for Conveyor belt movement and MG996R servo motors for sorting mechanisms.  
-- **Custom Dataset Utilization**: Utilizes a pre-annotated dataset of over 9000 images with bounding box labels.   
+## 📐 3D Model Preview 
+<img src="Images/View1.jpg" alt="3D Model" width="500"/>
 
+---
+
+## 🎯 Features  
+- **Real-Time Object Detection**: Detects and classifies objects on the conveyor belt using YOLOv8 with Hailo AI acceleration.  
+- **Hardware Integration**: Includes NEMA 17 stepper motors for conveyor belt movement and MG996R servo motors for sorting mechanisms.  
+- **Custom Dataset Utilization**: Utilizes a pre-annotated dataset of over 9000 images with bounding box labels.  
+- **High-Performance Inference**: Leverages the **Hailo AI Kit** to accelerate neural network inference, improving real-time detection efficiency.  
+   
 ---
 
 ## 🛠️ Tech Stack
-1. **Hardware**: Raspberry Pi 5, Stepper Motors, Servo Motors.  
+1. **Hardware**: Raspberry Pi 5, Stepper Motors, Servo Motors, Hailo AI Kit, Raspberry Pi HQ Camera, 16mm 10MP Telephoto Lens for Raspberry Pi HQ Camera.  
 2. **Computer Vision**: YOLOv8 for object detection.  
 3. **Software Tools**:  
    - Python (Primary language)  
    - OpenCV (Image preprocessing)  
 4. **AI Training**: Trained YOLOv8 models on a pre-annotated dataset.  
-5. **Deployment**: Edge inference on Raspberry Pi.  
+5. **Deployment**: Edge inference on Raspberry Pi using Hailo AI Kit for improved processing speed.  
+
 
 ---
 
@@ -49,10 +56,12 @@ VisionSort-RPi is a DIY conveyor belt system designed to showcase real-world app
 
 3. **Hardware Setup**:  
    - Designed a conveyor belt with Raspberry Pi for edge processing.  
-   - Integrated stepper and servo motors for automation.  
+   - Integrated stepper and servo motors for automation.
+   - Used a **16mm 10MP Telephoto Lens** with the **Raspberry Pi HQ Camera** for precise image capture.  
 
 4. **Deployment**:  
-   - Deployed YOLOv8 on the Raspberry Pi 5 for real-time object classification and sorting.  
+   - Deployed YOLOv8 on the Raspberry Pi 5 for real-time object classification and sorting.
+   - Optimized inference performance using the **Hailo AI Kit**, leveraging its neural network accelerator for high-speed processing.  
 
 ---
 
@@ -86,9 +95,9 @@ VisionSort-RPi is a DIY conveyor belt system designed to showcase real-world app
 ---
 
 ## 🙌 Future Improvements
-- Add multi-class object detection for diverse sorting tasks.  
-- Integrate IoT for remote monitoring.  
-- Enhance speed and accuracy with optimized hardware.  
+- Further optimize model accuracy and speed using advanced quantization techniques.  
+- Expand dataset to include more object categories for diverse sorting applications.  
+- Integrate IoT for remote monitoring.    
 
 ---
 
@@ -101,7 +110,7 @@ I’m excited to connect and collaborate!
 ---
 
 ## 📚 License
-This project is licensed under the MIT License.
+This project is open-source and available under the [MIT License](LICENSE).  
 
 ---
 
