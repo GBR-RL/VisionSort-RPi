@@ -1,7 +1,7 @@
 import multiprocessing
 import os
 import time
-from detection import run_detection
+from detection import start_detection  # Import the start_detection function
 from sorter import Sorter
 from conveyor import ConveyorBelt
 
@@ -27,11 +27,11 @@ if __name__ == "__main__":
     # Start conveyor process
     conveyor = start_conveyor()
 
-    # Create processes
-    detection_process = multiprocessing.Process(target=run_detection)
+    # Create processes for detection and sorter
+    detection_process = multiprocessing.Process(target=start_detection)
     sorter_process = multiprocessing.Process(target=start_sorter, args=(conveyor,))
 
-    # Start processes
+    # Start the detection and sorter processes
     detection_process.start()
     sorter_process.start()
 
@@ -40,6 +40,7 @@ if __name__ == "__main__":
             time.sleep(1)  # Keep the main script running
     except KeyboardInterrupt:
         print("\nStopping all processes...")
+        # Gracefully terminate the detection, sorter, and conveyor processes
         detection_process.terminate()
         sorter_process.terminate()
         conveyor.stop()

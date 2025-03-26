@@ -9,6 +9,7 @@ from hailo_apps_infra.hailo_rpi_common import (
     app_callback_class,
 )
 from hailo_apps_infra.detection_pipeline import GStreamerDetectionApp
+import threading
 
 # Named Pipe (FIFO) Path
 FIFO_PATH = "/tmp/detection_fifo"
@@ -50,6 +51,7 @@ def app_callback(pad, info, user_data):
             detected_objects.append(mapped_label)
 
     if detected_objects:
+        # Write the detected objects to FIFO
         with open(FIFO_PATH, "w") as fifo:
             for obj in detected_objects:
                 print(f"Detected: {obj}. Sending to sorter.")
@@ -57,7 +59,22 @@ def app_callback(pad, info, user_data):
 
     return Gst.PadProbeReturn.OK
 
-if __name__ == "__main__":
+def start_detection():
+    """Start the detection process and run the GStreamer pipeline."""
     user_data = user_app_callback_class()
     app = GStreamerDetectionApp(app_callback, user_data)
     app.run()
+
+# Main function that starts the detection in a separate process
+if __name__ == "__main__":
+    # Run the detection in a separate thread (multiprocessing will handle this)
+    detection_thread = threading.Thread(target=start_detection)
+    detection_thread.daemon = True  # Daemonize the thread so it will stop when the main process stops
+    detection_thread.start()
+
+    # Keep the main thread alive
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print("\nDetection process stopped.")
