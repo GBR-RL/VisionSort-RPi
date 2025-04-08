@@ -73,11 +73,11 @@ Link to the full YouTube demonstration and animated GIFs showcasing the system i
 
 ## 📎 Quick Links
 
-- GitHub Repository: [VisionSort-RPi](https://github.com/yourusername/VisionSort-RPi)
+- GitHub Repository: [VisionSort-RPi](https://github.com/gbr-rl/VisionSort-RPi)
 - YouTube Demo: [Watch Now](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)
-- Training Script: [`training.py`](training.py)
-- Conversion Notebook: [`Convert_YoloV8_to_HEF.ipynb`](Convert_YoloV8_to_HEF.ipynb)
-- Hardware Schematic: [`docs/Wiring_Setup.pdf`](docs/Wiring_Setup.pdf)
+- Training Script: [`Training.py`](./training.py)
+- Conversion Notebook: [`Convert_YoloV8_to_HEF.ipynb`](./Convert_YoloV8_to_HEF.ipynb)
+- Hardware Schematic: [`Wiring_Setup.pdf`](./Wiring_Setup.pdf)
 
 ---
 
