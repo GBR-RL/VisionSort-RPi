@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VisionSort-RPi Documentation</title>
+  <title>VisionSort-RPi | Project Docs</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-dark.min.css" />
   <style>
     body {
@@ -12,99 +12,126 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       padding: 2rem;
     }
+    .markdown-body img {
+      border-radius: 8px;
+    }
+    .markdown-body a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+    table {
+      border-spacing: 2rem;
+    }
   </style>
 </head>
 <body class="markdown-body">
 
-# VisionSort-RPi Documentation Site
+<h1>👋 Welcome to VisionSort-RPi Docs</h1>
 
-Welcome to the official documentation for **VisionSort-RPi**, an AI-powered bolt and nut sorting system powered by YOLOv8, Raspberry Pi 5, and Hailo AI acceleration.
+<blockquote>
+  🎯 An intelligent edge-deployed conveyor belt system powered by Raspberry Pi 5, YOLOv8, and the Hailo AI accelerator — designed to detect and sort bolts & nuts in real time.
+</blockquote>
 
----
+<hr>
 
-## 📜 Navigation
+<h2>📜 Navigation</h2>
+<ul>
+  <li><a href="#project-highlights">🌟 Project Highlights</a></li>
+  <li><a href="#documentation-sections">📂 Documentation Sections</a></li>
+  <li><a href="#quick-links">📎 Quick Links</a></li>
+  <li><a href="#about-the-author">👨‍💻 About the Author</a></li>
+  <li><a href="#license">📄 License</a></li>
+</ul>
 
-- [🌟 Project Highlights](#-project-highlights)
-- [📂 Documentation Sections](#-documentation-sections)
-  - [🧠 Overview](#-overview)
-  - [🧰 Setup Guide](#-setup-guide)
-  - [⚙️ Hardware Wiring](#-hardware-wiring)
-  - [📦 Model Training & Conversion](#-model-training--conversion)
-  - [🖼️ System Visualization](#-system-visualization)
-  - [📽️ Demo & Results](#-demo--results)
-- [📎 Quick Links](#-quick-links)
-- [👨‍💻 About the Author](#-about-the-author)
-- [📄 License](#-license)
+<hr>
 
----
+<h2 id="project-highlights">🌟 Project Highlights</h2>
+<ul>
+  <li>YOLOv8-based object detection for bolts and nuts</li>
+  <li>Real-time sorting with Hailo AI on Raspberry Pi</li>
+  <li>Stepper + Servo motor integration for hardware control</li>
+  <li>Edge deployment using custom-trained model</li>
+  <li>Fully open-source and replicable hardware setup</li>
+</ul>
 
-## 🌟 Project Highlights
+<hr>
 
-- YOLOv8-based object detection for bolts and nuts
-- Real-time sorting with Hailo AI on Raspberry Pi
-- Stepper + Servo motor integration for hardware control
-- Edge deployment using custom-trained model
-- Fully open-source and replicable hardware setup
+<h2 id="documentation-sections">📂 Documentation Sections</h2>
 
----
+<h3>🧠 Overview</h3>
+<p>Summary of the project, design philosophy, and objectives.</p>
 
-## 📂 Documentation Sections
+<h3>🧰 Setup Guide</h3>
+<p>Setup the environment using Hailo’s official RPi repo:</p>
+<pre><code>
+git clone https://github.com/hailo-ai/hailo-rpi5-examples.git
+cd hailo-rpi5-examples
+./install.sh
+source setup_env.sh
+</code></pre>
 
-### 🧠 Overview
-A summary of the project, design philosophy, and objectives.
+<p>Then run the system:</p>
+<pre><code>
+python detection/detection.py \
+  --labels-json resources/nut_bolt-labels.json \
+  --hef-path model/nut_bolt_model.hef \
+  --input rpi
+</code></pre>
 
-### 🧰 Setup Guide
-Instructions for setting up the environment, installing dependencies, and running the codebase.
+<h3>⚙️ Hardware Wiring</h3>
+<p>Details on how GPIO pins are used to control motors and servos.</p>
+<p>See: <a href="./Wiring_Setup.pdf">Wiring_Setup.pdf</a></p>
 
-### ⚙️ Hardware Wiring
-Detailed wiring instructions for stepper drivers, servo motors, power delivery, and GPIO pinout (based on `Wiring_Setup.pdf`).
+<h3>📦 Model Training & Conversion</h3>
+<ul>
+  <li>Trained YOLOv8n.pt on Roboflow dataset of 9000+ images</li>
+  <li>Converted to .onnx, then to .hef using Hailo DFC compiler</li>
+  <li>Notebook: <a href="./Convert_YoloV8_to_HEF.ipynb">Convert_YoloV8_to_HEF.ipynb</a></li>
+</ul>
 
-### 📦 Model Training & Conversion
-Step-by-step guide on training YOLOv8 on a custom dataset and converting `.pt → .onnx → .hef` using Hailo’s DFC compiler.
-
-### 🖼️ System Visualization
-
+<h3>🖼️ System Visualization</h3>
 <table>
   <tr>
     <td align="center">
       <strong>3D CAD Model</strong><br>
-      <img src="Images/View1.jpg" alt="3D CAD Model" width="400"/>
+      <img src="Images/View1.jpg.png" width="400" alt="CAD Model"/>
     </td>
     <td align="center">
       <strong>Real Conveyor System</strong><br>
-      <img src="Images/Real_System.jpg" alt="Real Conveyor System" width="400"/>
+      <img src="Images/Real_System.jpg" width="400" alt="Real System"/>
     </td>
   </tr>
 </table>
 
-> _Side-by-side comparison of the designed CAD model and the actual built system with camera and sorting flapper._
+<h3>📽️ Demo & Results</h3>
+<p>
+  <a href="https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID" target="_blank">
+    🎥 Watch the real-time bolt & nut sorting demo on YouTube
+  </a>
+</p>
 
-### 📽️ Demo & Results
-Link to the full YouTube demonstration and animated GIFs showcasing the system in real-time.
+<hr>
 
----
+<h2 id="quick-links">📎 Quick Links</h2>
+<ul>
+  <li><a href="https://github.com/GBR-RL/VisionSort-RPi">🔗 GitHub Repository</a></li>
+  <li><a href="./training.py">🧠 Training Script</a></li>
+  <li><a href="./Convert_YoloV8_to_HEF.ipynb">🔄 Conversion Notebook</a></li>
+  <li><a href="./Wiring_Setup.pdf">📄 Wiring Schematic</a></li>
+</ul>
 
-## 📎 Quick Links
+<hr>
 
-- GitHub Repository: [VisionSort-RPi](https://github.com/gbr-rl/VisionSort-RPi)
-- YouTube Demo: [Watch Now](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)
-- Training Script: [`Training.py`](./Training.py)
-- Conversion Notebook: [`Convert_YoloV8_to_HEF.ipynb`](./Convert_YoloV8_to_HEF.ipynb)
-- Hardware Schematic: [`Wiring_Setup.pdf`](./Wiring_Setup.pdf)
+<h2 id="about-the-author">👨‍💻 About the Author</h2>
+<p>
+  <strong>Rohiith Gettala</strong> — MSc Robotics Engineer passionate about real-time vision systems, embedded AI, and building things that move and think 🤖  
+  <br>📬 <a href="mailto:gbrohiith@gmail.com">Email</a> | <a href="https://www.linkedin.com/in/rohiithgb">LinkedIn</a>
+</p>
 
----
+<hr>
 
-## 👨‍💻 About the Author
-
-**Rohiith Gettala [@gbr-rl]**  
-_MSc Robotics Systems_  
-📬 Reach out on [LinkedIn](https://www.linkedin.com/in/rohiithgb/) or [email](mailto:gbrohiith@gmail.com) for collaborations.
-
-
-### 📄 License
-MIT License © 2025
+<h2 id="license">📄 License</h2>
+<p>MIT License © 2025</p>
 
 </body>
 </html>
-
-
