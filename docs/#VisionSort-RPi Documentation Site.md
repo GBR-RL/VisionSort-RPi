@@ -1,0 +1,95 @@
+<!-- GitHub Pages Navigation Template -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-dark.min.css">
+
+<div class="markdown-body" style="padding: 2em;">
+
+# VisionSort-RPi Documentation Site
+
+Welcome to the official documentation for **VisionSort-RPi**, an AI-powered bolt and nut sorting system powered by YOLOv8, Raspberry Pi 5, and Hailo AI acceleration.
+
+---
+
+## 📜 Navigation
+
+- [🌟 Project Highlights](#-project-highlights)
+- [📂 Documentation Sections](#-documentation-sections)
+  - [🧠 Overview](#-overview)
+  - [🧰 Setup Guide](#-setup-guide)
+  - [⚙️ Hardware Wiring](#-hardware-wiring)
+  - [📦 Model Training & Conversion](#-model-training--conversion)
+  - [🖼️ System Visualization](#-system-visualization)
+  - [📽️ Demo & Results](#-demo--results)
+- [📎 Quick Links](#-quick-links)
+- [👨‍💻 About the Author](#-about-the-author)
+- [📄 License](#-license)
+
+---
+
+## 🌟 Project Highlights
+
+- YOLOv8-based object detection for bolts and nuts
+- Real-time sorting with Hailo AI on Raspberry Pi
+- Stepper + Servo motor integration for hardware control
+- Edge deployment using custom-trained model
+- Fully open-source and replicable hardware setup
+
+---
+
+## 📂 Documentation Sections
+
+### 🧠 Overview
+A summary of the project, design philosophy, and objectives.
+
+### 🧰 Setup Guide
+Instructions for setting up the environment, installing dependencies, and running the codebase.
+
+### ⚙️ Hardware Wiring
+Detailed wiring instructions for stepper drivers, servo motors, power delivery, and GPIO pinout (based on `Wiring_Setup.pdf`).
+
+### 📦 Model Training & Conversion
+Step-by-step guide on training YOLOv8 on a custom dataset and converting `.pt → .onnx → .hef` using Hailo’s DFC compiler.
+
+### 🖼️ System Visualization
+
+<table>
+  <tr>
+    <td align="center">
+      <strong>3D CAD Model</strong><br>
+      <img src="Images/View1.jpg.png" alt="3D CAD Model" width="400"/>
+    </td>
+    <td align="center">
+      <strong>Real Conveyor System</strong><br>
+      <img src="Images/Real_System.jpg" alt="Real Conveyor System" width="400"/>
+    </td>
+  </tr>
+</table>
+
+> _Side-by-side comparison of the designed CAD model and the actual built system with camera and sorting flapper._
+
+### 📽️ Demo & Results
+Link to the full YouTube demonstration and animated GIFs showcasing the system in real-time.
+
+---
+
+## 📎 Quick Links
+
+- GitHub Repository: [VisionSort-RPi](https://github.com/yourusername/VisionSort-RPi)
+- YouTube Demo: [Watch Now](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)
+- Training Script: [`training.py`](training.py)
+- Conversion Notebook: [`Convert_YoloV8_to_HEF.ipynb`](Convert_YoloV8_to_HEF.ipynb)
+- Hardware Schematic: [`docs/Wiring_Setup.pdf`](docs/Wiring_Setup.pdf)
+
+---
+
+## 👨‍💻 About the Author
+
+**Rohiith Gettala [@gbr-rl]**  
+_MSc Robotics_  
+📬 Reach out on [LinkedIn](https://www.linkedin.com/in/rohiithgb/) or [email](mailto:[gbrohiith@gmail.com) for collaborations.
+
+
+### 📄 License
+MIT License © 2025
+
+</div>
+
