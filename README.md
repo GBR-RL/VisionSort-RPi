@@ -30,7 +30,7 @@ Built using **Raspberry Pi 5**, **YOLOv8**, and the **Hailo AI accelerator**, it
   <tr>
     <td align="center">
       <strong>3D CAD Model</strong><br>
-      <img src="Images/View1.jpg.png" alt="3D CAD Model" width="400"/>
+      <img src="Images/View1.jpg" alt="3D CAD Model" width="400"/>
     </td>
     <td align="center">
       <strong>Real Conveyor System</strong><br>
@@ -79,15 +79,16 @@ Built using **Raspberry Pi 5**, **YOLOv8**, and the **Hailo AI accelerator**, it
 - Trained on HPC using YOLOv8 custom config
 - Inference optimized with **Hailo RT SDK**
 
+---
+
 ### 🧰 Software Pipeline
-```mermaid
-graph TD
-A[Camera Frame Capture] --> B[Image Preprocessing (OpenCV)]
-B --> C[YOLOv8 Inference (Hailo AI)]
-C --> D[Object Classification]
-D --> E[Motor Control Signal]
-E --> F[Stepper + Servo Movement]
-```
+
+1. **Camera Frame Capture** → 
+2. **Image Preprocessing (OpenCV)** →
+3. **YOLOv8 Inference (Hailo AI)** →
+4. **Object Classification** →
+5. **Motor Control Signal** →
+6. **Stepper + Servo Movement**
 
 ---
 

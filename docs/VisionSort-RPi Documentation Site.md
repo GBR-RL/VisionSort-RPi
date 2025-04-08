@@ -55,7 +55,7 @@ Step-by-step guide on training YOLOv8 on a custom dataset and converting `.pt �
   <tr>
     <td align="center">
       <strong>3D CAD Model</strong><br>
-      <img src="Images/View1.jpg.png" alt="3D CAD Model" width="400"/>
+      <img src="Images/View1.jpg" alt="3D CAD Model" width="400"/>
     </td>
     <td align="center">
       <strong>Real Conveyor System</strong><br>
@@ -75,7 +75,7 @@ Link to the full YouTube demonstration and animated GIFs showcasing the system i
 
 - GitHub Repository: [VisionSort-RPi](https://github.com/gbr-rl/VisionSort-RPi)
 - YouTube Demo: [Watch Now](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)
-- Training Script: [`Training.py`](./training.py)
+- Training Script: [`Training.py`](./Training.py)
 - Conversion Notebook: [`Convert_YoloV8_to_HEF.ipynb`](./Convert_YoloV8_to_HEF.ipynb)
 - Hardware Schematic: [`Wiring_Setup.pdf`](./Wiring_Setup.pdf)
 
@@ -84,8 +84,8 @@ Link to the full YouTube demonstration and animated GIFs showcasing the system i
 ## 👨‍💻 About the Author
 
 **Rohiith Gettala [@gbr-rl]**  
-_MSc Robotics_  
-📬 Reach out on [LinkedIn](https://www.linkedin.com/in/rohiithgb/) or [email](mailto:[gbrohiith@gmail.com) for collaborations.
+_MSc Robotics Systems_  
+📬 Reach out on [LinkedIn](https://www.linkedin.com/in/rohiithgb/) or [email](mailto:gbrohiith@gmail.com) for collaborations.
 
 
 ### 📄 License
