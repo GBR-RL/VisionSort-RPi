@@ -34,7 +34,7 @@ Built using **Raspberry Pi 5**, **YOLOv8**, and the **Hailo AI accelerator**, it
     </td>
     <td align="center">
       <strong>Real Conveyor System</strong><br>
-      <img src="Images/Real_System.jpg" alt="Real Conveyor System" width="400"/>
+      <img src="Images/Real_System1.jpg" alt="Real Conveyor System" width="400"/>
     </td>
   </tr>
 </table>
