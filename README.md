@@ -182,7 +182,7 @@ YOLOv8 `.pt` model was converted to Hailo-compatible `.hef` format using the **H
 
 > ⚙️ Real-time sorting demo using computer vision and Raspberry Pi:
 
-🎥 [![VisionSort Demo](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/hqdefault.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)
+🎥 [![VisionSort Demo](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/hqdefault.jpg)](https://www.youtube.com/watch?v=cI-RrebKUd8)
 
 ---
 
