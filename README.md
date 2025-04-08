@@ -184,8 +184,6 @@ YOLOv8 `.pt` model was converted to Hailo-compatible `.hef` format using the **H
 
 🎥 [![VisionSort Demo](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/hqdefault.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)
 
-Replace `YOUTUBE_VIDEO_ID` with your actual video ID!
-
 ---
 
 ## 🛠️ What's Next?
