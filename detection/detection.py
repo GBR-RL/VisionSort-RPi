@@ -1,8 +1,8 @@
-import gi
-from gpiozero import Servo
+import gi 
+from gpiozero import Servo #
 from time import sleep
 import threading
-import lgpio
+import lgpio # Import the lgpio library for GPIO control
 import time
 import os
 from collections import deque
@@ -13,8 +13,8 @@ import numpy as np
 import cv2
 import hailo
 
-
-from hailo_apps_infra.hailo_rpi_common import (
+# Import the Hailo library for Hailo device interaction
+from hailo_apps_infra.hailo_rpi_common import ( 
     get_caps_from_pad,
     get_numpy_from_buffer,
     app_callback_class,
@@ -159,7 +159,8 @@ def app_callback(pad, info, user_data):
     
     #print(string_to_print)
     return Gst.PadProbeReturn.OK
-
+# End of app_callback function
+# Conveyor class to control the conveyor motor
 class Conveyor:
     def __init__(self, step_pin=17, dir_pin=27, en_pin=22, speed=6.0):
         self.step_pin = step_pin
@@ -197,7 +198,7 @@ class Conveyor:
         lgpio.gpiochip_close(self.h)
 
 
-
+# Main function to run the application
 if __name__ == "__main__":
     conveyor = Conveyor()
     try:
