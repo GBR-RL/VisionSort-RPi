@@ -24,7 +24,7 @@ Built using **Raspberry Pi 5**, **YOLOv8**, and the **Hailo AI accelerator**, it
 
 ---
 
-## 🖼️ 3D Model vs. Real System
+## 🖼️ 3D Model & Real Conveyor Sorting System
 
 <table>
   <tr>
@@ -34,7 +34,7 @@ Built using **Raspberry Pi 5**, **YOLOv8**, and the **Hailo AI accelerator**, it
     </td>
     <td align="center">
       <strong>Real Conveyor System</strong><br>
-      <img src="Images/Real_System1.jpg" alt="Real Conveyor System" width="400"/>
+      <img src="Images/Real_System1.jpg" alt="Conveyor Sorting System" width="400"/>
     </td>
   </tr>
 </table>
