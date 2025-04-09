@@ -1,0 +1,81 @@
+# ─────────────────────────────────────────────
+# 🌟 General Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.log
+*.tmp
+.env
+.venv
+*.swp
+
+# 🧠 Jupyter
+.ipynb_checkpoints/
+*.ipynb~
+
+# 🦾 Machine Learning
+runs/
+wandb/
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.engine
+*.hef
+
+# 🗂️ Dataset folders (adjust if needed)
+datasets/
+*.zip
+*.tar.gz
+
+# 🔧 Configs / Cache
+*.yaml~
+*.json~
+.cache/
+__results__/
+*.cfg
+
+# 📸 Image + Media Outputs
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.mp4
+*.avi
+*.mkv
+*.webm
+
+# 🛠️ Hailo / Build Artifacts
+hailo_sdk*
+*.sh~
+logs/
+hailo_output/
+*.elf
+*.bin
+hailo_projects/
+
+# 💾 OS & Editor-specific
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.code-workspace
+
+# 🧱 CAD / Large Binary Artifacts
+CAD/*.step
+CAD/*.stl
+CAD/*.prt
+CAD/*.zip
+*.sldprt
+*.sldasm
+
+# ✅ Exceptions
+!CAD/README.md
+!CAD/BOM.xlsx
+
+# 🚀 GitHub Pages
+docs/*.ipynb
+docs/*.zip
