@@ -65,6 +65,23 @@ Built using **Raspberry Pi 5**, **YOLOv8**, and the **Hailo AI accelerator**, it
 
 ---
 
+## 🧱 Mechanical Components & CAD
+
+This project includes custom-designed mechanical components modeled in Creo Parametric and fabricated using 3D printing. Key components include:
+
+- Flapper mechanism for nut/bolt sorting
+- Servo mounting bracket
+- RPi HQ camera holder
+
+🔗 View CAD designs & prints in [`CAD/`](./CAD)  
+📄 Download full BOM: [`BOM.xlsx`](./CAD/BOM.xlsx)  
+📤 External CAD repo: [GrabCAD – VisionSort-RPi](https://grabcad.com/library/visionsort-rpi-custom-cad-parts-1)
+
+📦 Download 3D printable CAD models:
+➡️ [GitHub Release: CAD v1.0](https://github.com/GBR-RL/VisionSort-RPi/releases)
+
+---
+
 ## 🧠 Project Architecture
 
 ### 🔧 Hardware Design
@@ -182,9 +199,7 @@ YOLOv8 `.pt` model was converted to Hailo-compatible `.hef` format using the **H
 
 > ⚙️ Real-time sorting demo using computer vision and Raspberry Pi:
 
-🎥 [![VisionSort Demo](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/hqdefault.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)
-
-Replace `YOUTUBE_VIDEO_ID` with your actual video ID!
+🎥 [![VisionSort Demo](https://img.youtube.com/vi/cI-RrebKUd8/hqdefault.jpg)](https://www.youtube.com/watch?v=cI-RrebKUd8)
 
 ---
 
