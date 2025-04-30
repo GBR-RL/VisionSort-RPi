@@ -42,7 +42,7 @@ Built using **Raspberry Pi 5**, **YOLOv8**, and the **Hailo AI accelerator**, it
 > _Side-by-side view of the designed CAD model and the actual built system with camera and flapper mounted._
 
 
-## 🎯 Key Features
+## Key Features
 
 - ✅ **Real-Time Object Detection** with YOLOv8 + Hailo for bolts and nuts
 - ✅ **Stepper + Servo Motor Integration** for precise movement and sorting
@@ -53,7 +53,7 @@ Built using **Raspberry Pi 5**, **YOLOv8**, and the **Hailo AI accelerator**, it
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category         | Tools & Hardware                               |
 |------------------|-------------------------------------------------|
@@ -65,7 +65,7 @@ Built using **Raspberry Pi 5**, **YOLOv8**, and the **Hailo AI accelerator**, it
 
 ---
 
-## 🧱 Mechanical Components & CAD
+## Mechanical Components & CAD
 
 This project includes custom-designed mechanical components modeled in Creo Parametric and fabricated using 3D printing. Key components include:
 
@@ -82,15 +82,15 @@ This project includes custom-designed mechanical components modeled in Creo Para
 
 ---
 
-## 🧠 Project Architecture
+## Project Architecture
 
-### 🔧 Hardware Design
+### Hardware Design
 - Conveyor belt driven by **NEMA 17 stepper motor**
 - **Servo-controlled deflector arm** for object redirection
 - HQ Camera with a **16mm telephoto lens** for accurate detection
 - All powered and controlled via **Raspberry Pi 5**
 
-### 🧪 Data + AI
+### Data + AI
 - Pre-annotated dataset from **Roboflow**
 - Bounding box labels with `nut` and `bolt` classes
 - Trained on HPC using YOLOv8 custom config
@@ -98,7 +98,7 @@ This project includes custom-designed mechanical components modeled in Creo Para
 
 ---
 
-### 🧰 Software Pipeline
+### Software Pipeline
 
 1. **Camera Frame Capture** → 
 2. **Image Preprocessing (OpenCV)** →
@@ -109,14 +109,14 @@ This project includes custom-designed mechanical components modeled in Creo Para
 
 ---
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
-### 🔧 Hailo AI Environment Setup
+### Hailo AI Environment Setup
 
 This project utilizes **Hailo’s AI acceleration platform** for deploying YOLOv8 models on the Raspberry Pi 5.  
 You can find the environment setup in their [official repo](https://github.com/hailo-ai/hailo-rpi5-examples).
 
-#### 🛠️ Installation Steps
+#### Installation Steps
 
 ```bash
 git clone https://github.com/hailo-ai/hailo-rpi5-examples.git
@@ -132,7 +132,7 @@ source setup_env.sh
 
 ---
 
-### 🚀 Running the Conveyor Sorting System
+### Running the Conveyor Sorting System
 
 Run the real-time detection and sorting application using:
 
@@ -147,12 +147,12 @@ python detection/detection.py \
 
 ---
 
-## 🔌 Hardware Wiring Diagram
+## Hardware Wiring Diagram
 
 The wiring for the stepper and servo motor system was meticulously crafted for precise control and safety.  
 Key components include the **TMC2208 stepper driver**, **MG996R servo motor**, **buck converter**, and **external 12V power supply**.
 
-### 📄 Wiring Summary
+### Wiring Summary
 
 | Component             | Raspberry Pi GPIO           | Notes                              |
 |----------------------|-----------------------------|-------------------------------------|
@@ -169,11 +169,11 @@ Key components include the **TMC2208 stepper driver**, **MG996R servo motor**, *
 
 ---
 
-## 🧠 Training the YOLOv8 Model
+## Training the YOLOv8 Model
 
 The model used in this project is a **fine-tuned YOLOv8n** trained on a **custom Roboflow dataset** (9000+ images).
 
-📜 Training script used: [`training.py`](training.py)
+Training script used: [`training.py`](training.py)
 
 - Based on YOLOv8n.pt pretrained weights
 - Trained to detect only two classes: `bolt` and `nut`
@@ -181,29 +181,29 @@ The model used in this project is a **fine-tuned YOLOv8n** trained on a **custom
 
 ---
 
-## 🔄 Model Conversion for Hailo Deployment
+## Model Conversion for Hailo Deployment
 
 YOLOv8 `.pt` model was converted to Hailo-compatible `.hef` format using the **Hailo Dataflow Compiler (DFC)**.
 
-📓 Conversion steps are documented in [`Convert_YoloV8_to_HEF.ipynb`](Convert_YoloV8_to_HEF.ipynb)
+ Conversion steps are documented in [`Convert_YoloV8_to_HEF.ipynb`](Convert_YoloV8_to_HEF.ipynb)
 
-### 🔁 Pipeline
+### Pipeline
 - `.pt` → `.onnx` via Ultralytics export
 - `.onnx` → `.hef` using Hailo’s `hef-generator` script
 
-📚 Guide followed: [Guide to Using Hailo DFC](https://community.hailo.ai/t/guide-to-using-the-dfc-to-convert-a-modified-yolov11-on-google-colab/7131)
+ Guide followed: [Guide to Using Hailo DFC](https://community.hailo.ai/t/guide-to-using-the-dfc-to-convert-a-modified-yolov11-on-google-colab/7131)
 
 ---
 
-## 📽️ System Demonstration
+## System Demonstration
 
-> ⚙️ Real-time sorting demo using computer vision and Raspberry Pi:
+>  Real-time sorting demo using computer vision and Raspberry Pi:
 
 🎥 [![VisionSort Demo](https://img.youtube.com/vi/cI-RrebKUd8/hqdefault.jpg)](https://www.youtube.com/watch?v=cI-RrebKUd8)
 
 ---
 
-## 🛠️ What's Next?
+## What's Next?
 
 - Add camera calibration + lighting normalization
 - Expand dataset to include more object categories for diverse sorting applications.  
